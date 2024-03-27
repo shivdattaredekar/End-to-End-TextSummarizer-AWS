@@ -24,7 +24,7 @@ list_of_files = [
     f'src/{project_name}/config/configuration.py',
     f'src/{project_name}/pipline/__init__.py',
     f'src/{project_name}/entity/__init__.py',
-    f'src/{project_name}/constants /__init__.py',
+    f'src/{project_name}/constants/__init__.py',
     'config/config.yaml',
     'params.yaml',
     'app.py',
@@ -37,21 +37,21 @@ list_of_files = [
 
 
 for filepath in list_of_files:
-    filepath = os.path(filepath) #This will detect the os and path to handle the issues with working in different OSes
+    filepath = Path(filepath) #This will detect the os and path to handle the issues with working in different OSes
     filedir, filename = os.path.split(filepath) #this is use to separate the foldername and filenames
     # but what if filedir is empty then?
     if filedir != "":
         os.makedirs(filedir, exist_ok=True)
         logging.info(f'Creating directory {filedir} for file {filename}')
     
-    # but what if filename is empty then? This is to make sure if there is some content in any file we will not 
+    # but what if filepath is not there? This is to make sure if there is some content in any file we will not 
         #overwrite it. insted we will create another file
-    if (not os.path.exists(filename)) or (os.path.getsize(filename) == 0):
-        with open(filename, 'w') as f:
+    if (not os.path.exists(filepath)) or (os.path.getsize(filepath) == 0):
+        with open(filepath, 'w') as f:
             pass
-            logging.info(f'Creating empty file {filename}')
+            logging.info(f'Creating empty file {filepath}')
     else:
-        logging.info(f'{filename} is already exists')
+        logging.info(f'{filepath} is already exists')
     
 
 
