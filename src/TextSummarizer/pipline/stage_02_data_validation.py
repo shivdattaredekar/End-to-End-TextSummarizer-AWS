@@ -1,5 +1,5 @@
 from TextSummarizer.config.configuration import ConfigrationManager
-from TextSummarizer.components.data_validation import DataValidation
+from TextSummarizer.components.data_validation import DataValiadtion
 from TextSummarizer.logging import logger
 
 class DataValidationTrainingPipeline:
@@ -9,9 +9,9 @@ class DataValidationTrainingPipeline:
     def main(self):
         config = ConfigrationManager()
         data_validation_config = config.get_data_validation_config()
-        data_validation = DataValidation(config=data_validation_config)
+        data_validation = DataValiadtion(config=data_validation_config)
         data_validation.validate_all_files_exist()
-        
+            
 
 
 

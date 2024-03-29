@@ -5,20 +5,24 @@
 # you can easily do it by changing the above params 
 
 artifacts_root: artifacts
-
 data_ingestion:
   root_dir : artifacts/data_ingestion
-  source_url : https://github.com/shivdattaredekar/TextSummarizer/raw/main/samsum.zip
+  source_url : https://github.com/shivdattaredekar/TextSummarizer/raw/main/samsumdata.zip
   local_data_file : artifacts/data_ingestion/data.zip
   unzip_dir : artifacts/data_ingestion
 
 
-artifacts_root: artifacts
-
 data_validation:
   root_dir : artifacts/data_validation
   STATUS_FILE : artifacts/data_validation/status.txt
-  ALL_REQUIRED_FILES : ['train.csv', 'test.csv', 'val.csv', 'data.zip']
+  ALL_REQUIRED_FILES: ["train", "test", "validation"]
+
+data_transformation:
+  root_dir: artifacts/data_transformation
+  data_path: artifacts/data_ingestion/samsum_dataset
+  tokenizer_name: google/pegasus-cnn_dailymail
+
+
 
 
 
