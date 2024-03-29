@@ -1,9 +1,9 @@
-# utlis is the file thatis being used to store the function that are going to be used again and again. hence insted 
+# utlis is the file that is being used to store the function that are going to be used again and again. hence insted 
     #of calling them again and again we can store them here in separate folder called common so that they can be 
     #called via packages
 
 import os
-from box.exceptions import BoxValueError #we will create any separate exception insted we will use this
+from box.exceptions import BoxValueError #we will not create any separate exception insted we will use this
 import yaml
 from TextSummarizer.logging import logger
 from ensure import ensure_annotations

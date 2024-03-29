@@ -10,7 +10,7 @@ project_name = 'TextSummarizer'
 # The below list is created to make sure that our files will be automaticllay picked from github & deployed in cloud
 # Initally the .github will be blank hence we created one more file .gitkeeps to make sure pushing happnes. later
     # we can delete this file
-# __init__ is created to make sure that project_name become the local package henc we will be able to import anything
+# __init__ is created to make sure that project_name become the local package hence we will be able to import anything
     # from project_name
 
 list_of_files = [
@@ -37,7 +37,7 @@ list_of_files = [
 
 
 for filepath in list_of_files:
-    filepath = Path(filepath) #This will detect the os and path to handle the issues with working in different OSes
+    filepath = Path(filepath) #This will detect the OS and path to handle the issues with working in different OS's
     filedir, filename = os.path.split(filepath) #this is use to separate the foldername and filenames
     # but what if filedir is empty then?
     if filedir != "":
