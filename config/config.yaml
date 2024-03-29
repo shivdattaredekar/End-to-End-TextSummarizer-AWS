@@ -1,5 +1,9 @@
 # 1. Update config.yaml
 
+# This file is created to create the path where your data can be stored. this is done to make sure if you want
+# to overwrite the existing data in the future then you need not want to make changes in the whole script
+# you can easily do it by changing the above params 
+
 artifacts_root: artifacts
 
 data_ingestion:
@@ -8,9 +12,13 @@ data_ingestion:
   local_data_file : artifacts/data_ingestion/data.zip
   unzip_dir : artifacts/data_ingestion
 
-# This file is created to create the path where your data can be stored. this is done to make sure if you want
-# to overwrite the existing data in the future then you need not want to make changes in the whole script
-# you can easily do it by changing the above params 
+
+artifacts_root: artifacts
+
+data_validation:
+  root_dir : artifacts/data_validation
+  STATUS_FILE : artifacts/data_validation/status.txt
+  ALL_REQUIRED_FILES : ['train.csv', 'test.csv', 'val.csv', 'data.zip']
 
 
 
