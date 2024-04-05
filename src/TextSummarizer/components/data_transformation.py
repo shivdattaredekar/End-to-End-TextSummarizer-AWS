@@ -31,14 +31,21 @@ class DataTransformation:
         # Get the list of CSV files in the directory
         csv_files = [file for file in os.listdir(folder_path) if file.endswith(".json")]
 
+        # Assuming you have a list containing the desired names for files
+        file_names = ['train', 'validation', 'test']
+
         # Construct the data_files dictionary dynamically
         data_files = {}
-        for i, file in enumerate(csv_files, start=1):
-            data_files[f"file_{i}"] = os.path.join(folder_path, file)
+        for file_name, file in zip(file_names, csv_files):
+            data_files[file_name] = os.path.join(folder_path, file)
 
         # Load the dataset from CSV files
         dataset_samsum = load_dataset("json", data_files=data_files)
 
-        dataset_samsum_pt = dataset_samsum.map(self.convert_examples_to_features, batched = True)
-        dataset_samsum_pt.save_to_disk(os.path.join(self.config.root_dir,"samsum_dataset"))
+        # Mapping and conversion
+        dataset_samsum_pt = dataset_samsum.map(self.convert_examples_to_features, batched=True)
+
+        # Saving dataset to disk
+        dataset_samsum_pt.save_to_disk(os.path.join(self.config.root_dir, "samsum_dataset"))
+
         
