@@ -11,5 +11,5 @@ class ModelEvaluationTrainingPipeline:
         config = ConfigrationManager()
         model_eva_config = config.get_model_evaluation_config()
         model_eva_config = ModelEvaluation(config=model_eva_config)
-        model_eva_config.train()
+        model_eva_config.evaluate()
 
