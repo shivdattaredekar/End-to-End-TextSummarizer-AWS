@@ -25,12 +25,11 @@ STEP 02- install the requirements
 pip install -r requirements.txt
 # Finally run the following command
 python app.py
-Now,
 
 # open up you local host and port
-Author: shivdatta redekar
-Data Scientist
-Email: shivdattaredekar@gmail.com
+    Author: shivdatta redekar
+    Data Scientist
+    Email: shivdattaredekar@gmail.com
 
 # AWS-CICD-Deployment-with-Github-Actions
 1. Login to AWS console.
