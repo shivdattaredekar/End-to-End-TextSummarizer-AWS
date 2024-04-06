@@ -26,13 +26,15 @@ pip install -r requirements.txt
 python app.py
 Now,
 
-open up you local host and port
+# open up you local host and port
 Author: Krish Naik
 Data Scientist
 Email: krishnaik06@gmail.com
-AWS-CICD-Deployment-with-Github-Actions
+
+# AWS-CICD-Deployment-with-Github-Actions
 1. Login to AWS console.
 2. Create IAM user for deployment
+
 #with specific access
 
 1. EC2 access : It is virtual machine
@@ -40,7 +42,7 @@ AWS-CICD-Deployment-with-Github-Actions
 2. ECR: Elastic Container registry to save your docker image in aws
 
 
-#Description: About the deployment
+# Description: About the deployment
 
 1. Build docker image of the source code
 
@@ -52,13 +54,13 @@ AWS-CICD-Deployment-with-Github-Actions
 
 5. Lauch your docker image in EC2
 
-#Policy:
+# Policy:
 
 1. AmazonEC2ContainerRegistryFullAccess
 
 2. AmazonEC2FullAccess
 3. Create ECR repo to store/save docker image
-- Save the URI: 566373416292.dkr.ecr.us-east-1.amazonaws.com/text-s
+- Save the URI: 058264298927.dkr.ecr.ap-south-1.amazonaws.com/text-s
 4. Create EC2 machine (Ubuntu)
 5. Open EC2 and Install docker in EC2 Machine:
 #optinal
@@ -76,17 +78,20 @@ sudo sh get-docker.sh
 sudo usermod -aG docker ubuntu
 
 newgrp docker
+
+
 6. Configure EC2 as self-hosted runner:
 setting>actions>runner>new self hosted runner> choose os> then run command one by one
+
 7. Setup github secrets:
-AWS_ACCESS_KEY_ID=
+    =
 
 AWS_SECRET_ACCESS_KEY=
 
-AWS_REGION = us-east-1
+AWS_REGION = ap-south-1
 
-AWS_ECR_LOGIN_URI = demo>>  566373416292.dkr.ecr.ap-south-1.amazonaws.com
+AWS_ECR_LOGIN_URI = demo>>  058264298927.dkr.ecr.ap-south-1.amazonaws.com
 
-ECR_REPOSITORY_NAME = simple-app
+ECR_REPOSITORY_NAME = text-s
 
 
