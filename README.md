@@ -60,6 +60,8 @@ Email: shivdattaredekar@gmail.com
 1. AmazonEC2ContainerRegistryFullAccess
 
 2. AmazonEC2FullAccess
+
+# ECR 
 3. Create ECR repo to store/save docker image
 - Save the URI: 058264298927.dkr.ecr.ap-south-1.amazonaws.com/text-s
 4. Create EC2 machine (Ubuntu)
@@ -84,7 +86,7 @@ newgrp docker
 6. Configure EC2 as self-hosted runner:
 setting>actions>runner>new self hosted runner> choose os> then run command one by one
 
-7. Setup github secrets:
+# Setup github secrets:
     =
 
 AWS_SECRET_ACCESS_KEY=
