@@ -1,6 +1,6 @@
 # End to end Text-Summarizer-Project
 
-Link for the data = https://github.com/shivdattaredekar/TextSummarizer/raw/main/samsum.zip
+    Link for the data = https://github.com/shivdattaredekar/TextSummarizer/raw/main/samsum.zip
 
 ## Workflows
 Update config.yaml
@@ -16,7 +16,7 @@ How to run?
 STEPS:
 Clone the repository
 
-https://github.com/entbappy/End-to-end-Text-Summarization
+    https://github.com/shivdattaredekar/TextSummarizer.git
 
 STEP 01- Create a conda environment after opening the repository
 conda create -n summary python=3.8 -y
@@ -56,9 +56,9 @@ python app.py
 
 # Policy:
 
-1. AmazonEC2ContainerRegistryFullAccess
-
-2. AmazonEC2FullAccess
+    1. AmazonEC2ContainerRegistryFullAccess
+    
+    2. AmazonEC2FullAccess
 
 # ECR 
 3. Create ECR repo to store/save docker image
@@ -67,33 +67,33 @@ python app.py
 5. Open EC2 and Install docker in EC2 Machine:
 #optinal
 
-sudo apt-get update -y
-
-sudo apt-get upgrade
-
-#required
-
-curl -fsSL https://get.docker.com -o get-docker.sh
-
-sudo sh get-docker.sh
-
-sudo usermod -aG docker ubuntu
-
-newgrp docker
+    sudo apt-get update -y
+    
+    sudo apt-get upgrade
+    
+    #required
+    
+    curl -fsSL https://get.docker.com -o get-docker.sh
+    
+    sudo sh get-docker.sh
+    
+    sudo usermod -aG docker ubuntu
+    
+    newgrp docker
 
 
 6. Configure EC2 as self-hosted runner:
 setting>actions>runner>new self hosted runner> choose os> then run command one by one
 
 # Setup github secrets:
-    =
-
-AWS_SECRET_ACCESS_KEY=
-
-AWS_REGION = ap-south-1
-
-AWS_ECR_LOGIN_URI = demo>>  058264298927.dkr.ecr.ap-south-1.amazonaws.com
-
-ECR_REPOSITORY_NAME = text-s
+    AWS_ACCESS_KEY_ID =
+    
+    AWS_SECRET_ACCESS_KEY=
+    
+    AWS_REGION = ap-south-1
+    
+    AWS_ECR_LOGIN_URI = demo>>  058264298927.dkr.ecr.ap-south-1.amazonaws.com
+    
+    ECR_REPOSITORY_NAME = text-s
 
 
